@@ -5,6 +5,7 @@ BPP-Plataforma es una aplicación web integral diseñada para proporcionar una e
 ## Tecnologías Utilizadas
 
 ### Frontend
+
 - React
 - Material-UI
 - React Router
@@ -12,6 +13,7 @@ BPP-Plataforma es una aplicación web integral diseñada para proporcionar una e
 - Vite
 
 ### Backend
+
 - Express.js
 - Node.js
 - Jade (motor de plantillas)
@@ -19,23 +21,27 @@ BPP-Plataforma es una aplicación web integral diseñada para proporcionar una e
 ## Instalación y Configuración
 
 ### Requisitos Previos
+
 - Node.js (v14 o posterior)
 - npm (v6 o posterior)
 
 ### Configuración del Frontend
 
 1. Navegar al directorio del frontend:
-   ```
+
+   ```bash
    cd bpp-frontend
    ```
 
 2. Instalar las dependencias:
-   ```
+
+   ```bash
    npm install
    ```
 
 3. Iniciar el servidor de desarrollo:
-   ```
+
+   ```bash
    npm run dev
    ```
 
@@ -44,17 +50,20 @@ BPP-Plataforma es una aplicación web integral diseñada para proporcionar una e
 ### Configuración del Backend
 
 1. Navegar al directorio del backend:
-   ```
+
+   ```bash
    cd bpp-backend
    ```
 
 2. Instalar las dependencias:
-   ```
+
+   ```bash
    npm install
    ```
 
 3. Iniciar el servidor de desarrollo:
-   ```
+
+   ```bash
    npm run dev
    ```
 
@@ -65,7 +74,8 @@ BPP-Plataforma es una aplicación web integral diseñada para proporcionar una e
 Para ejecutar tanto el frontend como el backend de forma concurrente, se puede utilizar el script definido en el `package.json` raíz:
 
 1. Desde el directorio raíz del proyecto, ejecuta:
-   ```
+
+   ```bash
    npm start
    ```
 
