@@ -24,14 +24,14 @@ const Sidebar = ({
       variant={isSmallScreen ? 'temporary' : 'persistent'}
       open={isOpen}
       onClose={isSmallScreen ? toggleSidebar : undefined}
-      classes={{
-        paper: `w-64 ${isSmallScreen ? '' : isOpen ? '' : 'hidden'}`,
-      }}
       sx={{
         '& .MuiDrawer-paper': {
+          width: '256px',
           backgroundColor: theme.palette.primary.main,
           color: theme.palette.primary.contrastText,
           borderRight: 'none',
+          transition: 'transform 0.3s ease-in-out',
+          transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
         },
       }}
     >

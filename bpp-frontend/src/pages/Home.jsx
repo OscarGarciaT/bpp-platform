@@ -5,7 +5,7 @@ import { learningOptions } from '../data/appData';
 export default function Home({ theme }) {
   return (
     <Box
-      className="flex-1 overflow-auto py-12 md:py-16"
+      className="flex flex-col min-h-full"
       sx={{
         background: `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.secondary.light})`,
         position: 'relative',
@@ -22,7 +22,10 @@ export default function Home({ theme }) {
         },
       }}
     >
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container
+        maxWidth="lg"
+        sx={{ position: 'relative', zIndex: 1, flexGrow: 1, py: 4 }}
+      >
         <Box mb={8} p={4} bgcolor="rgba(255, 255, 255, 0.9)" borderRadius={4}>
           <Typography
             variant="h2"

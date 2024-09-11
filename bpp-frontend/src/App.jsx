@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {
   ThemeProvider,
@@ -22,6 +22,14 @@ export default function App() {
   const [colorScheme, setColorScheme] = useState('spring');
   const [anchorEl, setAnchorEl] = useState(null);
   const isSmallScreen = useMediaQuery('(max-width:960px)');
+
+  // Add this new state
+  const [sidebarWidth, setSidebarWidth] = useState(isSmallScreen ? 0 : 256);
+
+  // Add this effect to update sidebarWidth when isOpen or isSmallScreen changes
+  useEffect(() => {
+    setSidebarWidth(isSmallScreen ? 0 : sidebarOpen ? 256 : 0);
+  }, [sidebarOpen, isSmallScreen]);
 
   const theme = useMemo(
     () =>
@@ -88,14 +96,7 @@ export default function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div
-          className="flex h-screen"
-          style={{
-            backgroundImage: 'url("/placeholder.svg?height=1080&width=1920")',
-            backgroundSize: 'cover',
-            backgroundAttachment: 'fixed',
-          }}
-        >
+        <div className="flex h-screen">
           <Sidebar
             isOpen={sidebarOpen}
             toggleSidebar={toggleSidebar}
@@ -106,7 +107,10 @@ export default function App() {
             theme={theme}
           />
 
-          <div className="flex-1 flex flex-col overflow-hidden">
+          <div
+            className="flex-1 flex flex-col overflow-hidden transition-all duration-300 ease-in-out"
+            style={{ marginLeft: isSmallScreen ? 0 : sidebarWidth }}
+          >
             <Header
               toggleSidebar={toggleSidebar}
               handleColorSchemeMenuOpen={handleColorSchemeMenuOpen}
@@ -115,14 +119,21 @@ export default function App() {
               handleColorSchemeChange={handleColorSchemeChange}
             />
 
-            <Routes>
-              <Route path="/" element={<Home theme={theme} />} />
-              <Route path="/comunidad" element={<Comunidad theme={theme} />} />
-              <Route path="/fauna" element={<Fauna theme={theme} />} />
-              <Route path="/flora" element={<Flora theme={theme} />} />
-              <Route path="/juegos" element={<Juegos theme={theme} />} />
-              <Route path="/mapa" element={<Mapa theme={theme} />} />
-            </Routes>
+            <main className="flex-1 w-full overflow-x-hidden overflow-y-auto">
+              <div className="h-full w-full">
+                <Routes>
+                  <Route path="/" element={<Home theme={theme} />} />
+                  <Route
+                    path="/comunidad"
+                    element={<Comunidad theme={theme} />}
+                  />
+                  <Route path="/fauna" element={<Fauna theme={theme} />} />
+                  <Route path="/flora" element={<Flora theme={theme} />} />
+                  <Route path="/juegos" element={<Juegos theme={theme} />} />
+                  <Route path="/mapa" element={<Mapa theme={theme} />} />
+                </Routes>
+              </div>
+            </main>
           </div>
         </div>
       </ThemeProvider>
