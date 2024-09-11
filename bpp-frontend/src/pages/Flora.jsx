@@ -22,7 +22,7 @@ const plantCategories = [
       {
         name: 'Ceibo',
         image:
-          'https://images.unsplash.com/photo-1605943239011-9c3a2bf1e6a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+          'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
       },
       {
         name: 'Roble',
@@ -37,7 +37,7 @@ const plantCategories = [
       {
         name: 'Eucalipto',
         image:
-          'https://images.unsplash.com/photo-1628552704792-ac406d3aaed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+          'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
       },
       {
         name: 'Jacaranda',
@@ -47,7 +47,7 @@ const plantCategories = [
       {
         name: 'Araucaria',
         image:
-          'https://images.unsplash.com/photo-1605943239011-9c3a2bf1e6a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+          'https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
       },
     ],
   },
