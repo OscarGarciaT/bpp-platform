@@ -239,7 +239,7 @@ export default function Flora({ theme }) {
               'url("https://th.bing.com/th/id/OIP.slTZ5pg4TmtMK8WqwCUOrgAAAA?rs=1&pid=ImgDetMain")', // Ruta de la imagen
             backgroundSize: 'contain', // Ajusta la imagen para que se vea completa sin cortar
             backgroundPosition: 'center', // Centra la imagen
-            height: '100px', // Altura del contenedor
+            height: '150px', // Altura del contenedor
             display: 'flex', // Utiliza flex para centrar el contenido
             justifyContent: 'center', // Centra el contenido horizontalmente
             alignItems: 'center', // Centra el contenido verticalmente
@@ -251,10 +251,13 @@ export default function Flora({ theme }) {
             className="mb-4 text-center font-bold"
             color="black"
             sx={{
-              position: 'absolute', // Posición absoluta para que esté encima de la imagen
+              position: 'absolute',
+              top: '10%', // Ajusta el valor del top según tu preferencia
+              left: '50%',
+              transform: 'translateX(-50%)',
               textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
               fontWeight: 800,
-              zIndex: 1, // Asegura que el texto esté por encima de la imagen
+              zIndex: 1,
             }}
           >
             Juega y Aprende
