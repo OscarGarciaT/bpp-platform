@@ -11,8 +11,8 @@
     "start": "concurrently \"npm run dev --workspace=bpp-frontend\" \"npm run dev --workspace=bpp-backend\""
   },
   "devDependencies": {
-    "husky": "^8.0.0",
-    "lint-staged": "^13.2.2"
+    "husky": "9.1.6",
+    "lint-staged": "13.3.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
