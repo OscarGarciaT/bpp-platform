@@ -58,14 +58,14 @@ const plantCategories = [
     title: 'Nivel 3',
     plants: [
       {
-        name: 'Adivina 1',
+        name: 'Adivina',
         image:
           'https://i.pinimg.com/originals/69/8c/39/698c39cc0fe08151a185ad0f98c7f9bf.jpg',
       },
       {
-        name: 'Adivina 2',
+        name: 'Puzzle',
         image:
-          'https://i.pinimg.com/originals/69/8c/39/698c39cc0fe08151a185ad0f98c7f9bf.jpg',
+          'https://th.bing.com/th/id/OIP.2Enlb-fRoVZ__EBsB84BeQAAAA?rs=1&pid=ImgDetMain',
       },
       {
         name: 'Adivina 3',

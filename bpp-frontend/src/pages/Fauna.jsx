@@ -14,44 +14,7 @@ import {
 } from '@mui/material';
 import { ChevronRight, ChevronLeft } from '@mui/icons-material';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const animalCategories = [
-  {
-    title: 'Mamíferos',
-    animals: [
-      {
-        name: 'Jaguar',
-        image:
-          'https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045_1280.jpg',
-      },
-    ],
-  },
-  {
-    title: 'Aves',
-    animals: [
-      {
-        name: 'Colibrí',
-        image:
-          'https://cdn.pixabay.com/photo/2017/03/13/10/25/hummingbird-2139279_1280.jpg',
-      },
-    ],
-  },
-  {
-    title: 'Reptiles',
-    animals: [
-      {
-        name: 'Anaconda',
-        image:
-          'https://cdn.pixabay.com/photo/2014/08/15/21/40/snake-419043_1280.jpg',
-      },
-      {
-        name: 'Caimán',
-        image:
-          'https://cdn.pixabay.com/photo/2014/01/14/18/31/nile-crocodile-245013_1280.jpg',
-      },
-    ],
-  },
-];
+import { animalCategories } from '../data/appData';
 
 const AnimalCategory = ({ category }) => {
   const [startIndex, setStartIndex] = useState(0);
@@ -212,12 +175,11 @@ export default function Fauna({ theme }) {
           </Typography>
         </Box>
 
-        <Box mb={4} p={4} bgcolor="rgba(255, 255, 255, 0.9)" borderRadius={4}>
+        <Box mb={4} p={2} bgcolor="rgba(255, 255, 255, 0.9)" borderRadius={4}>
           <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            mb={2}
           >
             <Select
               value={selectedCategory}
